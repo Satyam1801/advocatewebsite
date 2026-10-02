@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikhil Shukla — Advocate | Cyber Crime Law, Delhi High Court</title>
+<style>
+  :root{
+    --navy:#12202E;
+    --navy-dark:#0D1720;
+    --navy-light:#1B2C3D;
+    --border-dark:#33465A;
+    --gold:#C9A227;
+    --cream:#F5F2EC;
+    --cream-border:#E3DCCB;
+    --ink:#1B2733;
+    --body-grey:#3A4956;
+    --muted:#AEB9C3;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Georgia,'Times New Roman',serif;background:var(--cream);color:var(--ink);line-height:1.5}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;margin:0}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%;display:block}
+  .sans{font-family:Arial,Helvetica,sans-serif}
+  .tag{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+  .btn{font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;padding:14px 28px;border-radius:2px;display:inline-block;border:1px solid transparent;cursor:pointer}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-outline{border-color:#4A5A68;color:var(--cream)}
+
+  /* header */
+  header{background:var(--navy);position:sticky;top:0;z-index:10}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1200px;margin:0 auto;gap:24px;flex-wrap:wrap}
+  .brand{display:flex;flex-direction:column;line-height:1.15}
+  .brand-name{font-size:22px;color:var(--cream);font-weight:600;font-family:'Playfair Display',Georgia,serif}
+  .brand-sub{color:var(--gold)}
+  nav.links{display:flex;gap:32px;align-items:center;flex-wrap:wrap}
+  .navlink{font-family:Arial,Helvetica,sans-serif;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:#EDE7DA}
+  .navlink:hover{color:var(--gold)}
+
+  /* hero */
+  .hero{background:var(--navy);padding:72px 0}
+  .hero-inner{display:flex;gap:56px;align-items:center;flex-wrap:wrap}
+  .hero-copy{flex:1 1 420px;display:flex;flex-direction:column;gap:22px}
+  .hero-copy h1{font-size:46px;color:var(--cream);line-height:1.2}
+  .hero-copy p{color:#C7CDD3;font-size:16px;line-height:1.75;max-width:540px}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+  .hero-photo{flex:0 0 320px;height:360px;border-radius:2px;background:var(--navy-light);border:1px solid var(--border-dark);display:flex;align-items:center;justify-content:center}
+  .hero-photo span{color:#5C6E7E;font-size:14px;text-align:center;padding:0 24px}
+
+  /* credentials */
+  .credentials{border-bottom:1px solid var(--cream-border)}
+  .credentials .wrap{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;padding:32px}
+  .cred-item{display:flex;flex-direction:column;min-width:140px}
+  .cred-item strong{font-size:24px}
+  .cred-item span{color:#7A6A45;margin-top:2px}
+
+  /* about */
+  .about{padding:80px 0}
+  .about .wrap{display:flex;gap:56px;flex-wrap:wrap}
+  .about-copy{flex:1 1 420px;display:flex;flex-direction:column;gap:18px}
+  .about-copy h2{font-size:32px}
+  .about-copy p{font-family:Arial,Helvetica,sans-serif;font-size:15.5px;line-height:1.8;color:var(--body-grey)}
+  .about-cards{flex:1 1 320px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+  .card{background:#fff;border:1px solid var(--cream-border);border-radius:2px;padding:18px 22px}
+  .card strong{display:block;margin-bottom:4px}
+  .card span{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#5A6875}
+
+  /* practice */
+  .practice{background:var(--navy);padding:80px 0}
+  .practice-head{text-align:center;display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
+  .practice-head h2{color:var(--cream);font-size:32px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media (max-width:900px){.grid3{grid-template-columns:1fr 1fr}}
+  @media (max-width:600px){.grid3{grid-template-columns:1fr}}
+  .pcard{background:var(--navy-light);border:1px solid var(--border-dark);border-radius:2px;padding:26px}
+  .pcard strong{color:var(--cream);font-size:18px;display:block;margin-bottom:8px}
+  .pcard p{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:var(--muted);line-height:1.65;margin:0}
+
+  /* why */
+  .why{padding:72px 0}
+  .why .wrap{display:flex;gap:48px;flex-wrap:wrap;align-items:center}
+  .why-copy{flex:1 1 380px;display:flex;flex-direction:column;gap:14px}
+  .why-copy h2{font-size:28px}
+  .why-copy p{font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.7;color:var(--body-grey);margin:0}
+  .why-grid{flex:1 1 380px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .why-grid div strong{font-size:15px}
+  .why-grid div span{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#5A6875;display:block;margin-top:2px}
+
+  /* contact / footer */
+  footer{background:var(--navy-dark);color:#EDE7DA;padding:64px 0}
+  footer .wrap{display:flex;gap:56px;flex-wrap:wrap}
+  .contact-form{flex:1 1 380px;display:flex;flex-direction:column;gap:18px}
+  .contact-form h2{color:var(--cream);font-size:28px}
+  form{display:flex;flex-direction:column;gap:14px;max-width:420px}
+  label{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:var(--muted)}
+  input,textarea{width:100%;margin-top:6px;padding:12px;border-radius:2px;border:1px solid var(--border-dark);background:var(--navy);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
+  .contact-info{flex:1 1 320px;display:flex;flex-direction:column;gap:14px}
+  .contact-info .name{font-size:20px;color:var(--cream);font-weight:600;font-family:'Playfair Display',Georgia,serif}
+  .contact-info p{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:var(--muted);line-height:1.8;margin:0}
+  .fine{font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#5C6E7E;margin-top:20px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <span class="brand-name">Nikhil Shukla</span>
+      <span class="tag brand-sub">Advocate, Delhi High Court</span>
+    </div>
+    <nav class="links">
+      <a class="navlink" href="#about">About</a>
+      <a class="navlink" href="#practice">Practice Areas</a>
+      <a class="navlink" href="#why">Why Us</a>
+      <a class="navlink" href="#contact">Contact</a>
+      <a class="btn btn-gold" href="#contact" style="padding:12px 22px">Book Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="tag" style="color:var(--gold)">Cyber Crime &amp; Digital Law</span>
+      <h1>Defending your digital rights, before the Delhi High Court.</h1>
+      <p>Advocate Nikhil Shukla represents individuals and businesses in cyber crime, data breach,
+        online fraud and IT Act matters — with dedicated litigation experience before the
+        Delhi High Court and subordinate courts.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#contact">Schedule a Consultation</a>
+        <a class="btn btn-outline" href="#practice">View Practice Areas</a>
+      </div>
+    </div>
+    <div class="hero-photo"><span>[ Portrait photograph of<br>Advocate Nikhil Shukla ]</span></div>
+  </div>
+</section>
+
+<section class="credentials">
+  <div class="wrap">
+    <div class="cred-item"><strong>Delhi High Court</strong><span class="tag">Enrolled &amp; Practicing</span></div>
+    <div class="cred-item"><strong>12+ Years</strong><span class="tag">Litigation Experience</span></div>
+    <div class="cred-item"><strong>300+ Cases</strong><span class="tag">Cyber &amp; IT Act Matters</span></div>
+    <div class="cred-item"><strong>Bar Council</strong><span class="tag">of Delhi, Member</span></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-copy">
+      <span class="tag" style="color:var(--gold)">About</span>
+      <h2>A focused practice in cyber and technology law</h2>
+      <p>Nikhil Shukla is an advocate practicing before the Delhi High Court, with a focused
+        practice in cyber crime, information technology law and digital evidence. His work spans
+        anticipatory bail and quashing petitions under the IT Act, data breach and privacy
+        disputes, online financial fraud, cyber defamation and matters involving electronic
+        evidence under the Bharatiya Sakshya Adhiniyam / Evidence Act.</p>
+      <p>He regularly advises corporates on compliance with the Information Technology Act, 2000
+        and data protection obligations, and appears before the Delhi Police Cyber Cell,
+        trial courts and the Delhi High Court.</p>
+    </div>
+    <div class="about-cards">
+      <div class="card"><strong>Education</strong><span>LL.B., Faculty of Law, University of Delhi</span></div>
+      <div class="card"><strong>Enrollment</strong><span>Bar Council of Delhi</span></div>
+      <div class="card"><strong>Courts of Practice</strong><span>Delhi High Court, District Courts of Delhi, Cyber Cell</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="practice" id="practice">
+  <div class="wrap">
+    <div class="practice-head">
+      <span class="tag" style="color:var(--gold)">Practice Areas</span>
+      <h2>How the firm can help</h2>
+    </div>
+    <div class="grid3">
+      <div class="pcard"><strong>Cyber Crime Defense</strong><p>Bail, quashing and trial defense in hacking, identity theft and IT Act prosecutions.</p></div>
+      <div class="pcard"><strong>Online Financial Fraud</strong><p>UPI, credit card and investment fraud complaints, recovery and cyber cell liaison.</p></div>
+      <div class="pcard"><strong>Data Breach &amp; Privacy</strong><p>Advisory and litigation on data protection, breach response and confidentiality disputes.</p></div>
+      <div class="pcard"><strong>Cyber Defamation &amp; Harassment</strong><p>Takedown orders, injunctions and complaints for online harassment, stalking and defamation.</p></div>
+      <div class="pcard"><strong>Digital Evidence</strong><p>Certification and admissibility of electronic records, forensic reports and expert evidence.</p></div>
+      <div class="pcard"><strong>Corporate Cyber Compliance</strong><p>IT Act compliance, policy drafting and representation before regulators.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="why-copy">
+      <span class="tag" style="color:var(--gold)">Why Choose This Firm</span>
+      <h2>Direct counsel. Delhi High Court experience.</h2>
+      <p>Every matter is handled personally by Advocate Shukla — from the first consultation to final arguments — with clear, honest guidance at every stage.</p>
+    </div>
+    <div class="why-grid">
+      <div><strong>Personal Attention</strong><span>No case handed off to juniors</span></div>
+      <div><strong>Technical Fluency</strong><span>Deep familiarity with digital evidence</span></div>
+      <div><strong>Rapid Response</strong><span>Time-sensitive bail &amp; injunction matters</span></div>
+      <div><strong>Transparent Fees</strong><span>Clear terms, agreed upfront</span></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-form">
+      <span class="tag" style="color:var(--gold)">Get in Touch</span>
+      <h2>Book a Consultation</h2>
+      <form onsubmit="return false;">
+        <label>Full Name
+          <input type="text" name="name" required>
+        </label>
+        <label>Phone Number
+          <input type="tel" name="phone" required>
+        </label>
+        <label>Brief Description of Matter
+          <textarea name="message" rows="4"></textarea>
+        </label>
+        <button type="submit" class="btn btn-gold" style="align-self:flex-start;border:none">Send Request</button>
+      </form>
+    </div>
+    <div class="contact-info">
+      <span class="name">Nikhil Shukla, Advocate</span>
+      <p>Chamber No. [___], Delhi High Court<br>Sher Shah Road, New Delhi – 110003</p>
+      <p>Phone: [+91-XXXXXXXXXX]<br>Email: [contact@nikhilshuklalaw.in]</p>
+      <p>Office Hours: Mon–Sat, 10:00 AM – 6:00 PM</p>
+      <span class="fine">© 2026 Nikhil Shukla, Advocate. All rights reserved. Attorney advertising — this website does not constitute legal advice.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

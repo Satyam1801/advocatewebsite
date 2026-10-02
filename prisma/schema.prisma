@@ -1,0 +1,156 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+}
+
+enum StoryStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ConsultationStatus {
+  NEW
+  CONTACTED
+  IN_PROGRESS
+  CLOSED
+}
+
+enum MatterType {
+  CRIMINAL_DEFENSE
+  BAIL
+  CYBERCRIME
+  DIVORCE
+  MAINTENANCE
+  DOMESTIC_VIOLENCE
+  CHILD_CUSTODY
+  OTHER
+}
+
+model AdminUser {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      Role     @default(ADMIN)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  stories   Story[]
+
+  @@map("admin_users")
+}
+
+model PracticeArea {
+  id               String   @id @default(cuid())
+  title            String
+  slug             String   @unique
+  shortDescription String
+  description      String   @db.Text
+  heroImage        String?
+  icon             String?
+  seoTitle         String?
+  seoDescription   String?
+  isPublished      Boolean  @default(true)
+  displayOrder     Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([slug])
+  @@index([isPublished])
+  @@map("practice_areas")
+}
+
+model StoryCategory {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  slug      String   @unique
+  createdAt DateTime @default(now())
+  stories   Story[]
+
+  @@map("story_categories")
+}
+
+model Tag {
+  id      String  @id @default(cuid())
+  name    String  @unique
+  stories Story[] @relation("StoryTags")
+
+  @@map("tags")
+}
+
+model Story {
+  id             String        @id @default(cuid())
+  title          String
+  slug           String        @unique
+  excerpt        String        @db.Text
+  content        String        @db.Text
+  coverImage     String?
+  author         AdminUser     @relation(fields: [authorId], references: [id])
+  authorId       String
+  category       StoryCategory? @relation(fields: [categoryId], references: [id])
+  categoryId     String?
+  tags           Tag[]         @relation("StoryTags")
+  status         StoryStatus   @default(DRAFT)
+  publishedAt    DateTime?
+  seoTitle       String?
+  seoDescription String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  @@index([slug])
+  @@index([status])
+  @@index([publishedAt])
+  @@index([categoryId])
+  @@map("stories")
+}
+
+model Media {
+  id        String   @id @default(cuid())
+  url       String
+  publicId  String   @unique
+  altText   String?
+  fileName  String
+  mimeType  String
+  sizeBytes Int
+  width     Int?
+  height    Int?
+  createdAt DateTime @default(now())
+
+  @@map("media")
+}
+
+model ConsultationRequest {
+  id                     String             @id @default(cuid())
+  fullName               String
+  phone                  String
+  email                  String?
+  matterType             MatterType         @default(OTHER)
+  briefDescription       String             @db.Text
+  preferredContactMethod String?
+  status                 ConsultationStatus @default(NEW)
+  adminNotes             String?            @db.Text
+  createdAt              DateTime           @default(now())
+  updatedAt              DateTime           @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+  @@map("consultation_requests")
+}
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String   @db.Text
+  updatedAt DateTime @updatedAt
+
+  @@map("site_settings")
+}
