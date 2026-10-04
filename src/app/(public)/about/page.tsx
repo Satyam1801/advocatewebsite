@@ -33,7 +33,7 @@ export default function AboutPage() {
           <div style={{ display: "flex", gap: 64, flexWrap: "wrap", alignItems: "flex-start" }}>
             <div style={{ flex: "0 0 300px", position: "relative" }}>
               <div style={{ position: "relative", width: "100%", height: 400, borderRadius: 2, overflow: "hidden", border: "1px solid var(--cream-border)" }}>
-                <Image src="/advocate-portrait.jpg" alt="Advocate Nikhil Shukla" fill style={{ objectFit: "cover", objectPosition: "center top" }} sizes="300px" />
+                <Image src="/advocate-portrait.jpg" alt="Advocate Nikhil Shukla" fill style={{ objectFit: "contain", objectPosition: "center bottom" }} sizes="300px" />
               </div>
               <div style={{ position: "absolute", top: 20, left: -4, width: 4, height: 80, background: "var(--gold)" }} />
             </div>

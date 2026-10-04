@@ -69,7 +69,7 @@ export default async function HomePage() {
 
             <div style={{ flex: "0 0 320px", position: "relative", alignSelf: "stretch", minHeight: 400 }}>
               <div style={{ position: "relative", width: "100%", height: "100%", minHeight: 400, borderRadius: 2, overflow: "hidden", border: "1px solid var(--border-dark)" }}>
-                <Image src="/advocate-portrait.jpg" alt="Advocate Nikhil Shukla — Portrait" fill sizes="(max-width: 768px) 100vw, 320px" style={{ objectFit: "cover", objectPosition: "center top" }} priority />
+                <Image src="/advocate-portrait.jpg" alt="Advocate Nikhil Shukla — Portrait" fill sizes="(max-width: 768px) 100vw, 320px" style={{ objectFit: "contain", objectPosition: "center bottom" }} priority />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(13,23,32,0.7) 0%, transparent 60%)" }} />
               </div>
               <div style={{ position: "absolute", top: 20, left: -4, width: 4, height: 80, background: "var(--gold)" }} />
